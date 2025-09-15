@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sticky Notes Todo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="header">
+      <h1>Sticky Todos</h1>
+      <div class="controls-top">
+        <button id="darkToggle" aria-pressed="false" title="Toggle dark mode">🌓</button>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="input-row">
+        <input id="taskInput" type="text" placeholder="Add a new task..." aria-label="New task">
+        <button id="addBtn">Add</button>
+      </section>
+
+      <section class="filters" role="tablist" aria-label="Filter tasks">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="active">Active</button>
+        <button class="filter-btn" data-filter="completed">Completed</button>
+      </section>
+
+      <ul id="taskList" class="ta" aria-live="polite"></ul>
+
+      <div class="actions">
+        <button id="clearAllBtn" class="danger">Clear All</button>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <small>Enter = add • Delete = remove focused task</small>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
